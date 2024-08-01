@@ -1,0 +1,172 @@
+body {
+    top: 0;
+    left: 0;
+    width: 22rem;
+    height: 100%;
+    background-color: antiquewhite;
+    font-family: 'Finger Paint';
+}
+
+.header {
+    background-color: #e24747;
+    color: wheat;
+    padding: 10px 0;
+}
+
+.header .container {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.header__logo img {
+    height: 65px;
+    display: block;
+    margin-left: 20px;
+    filter: drop-shadow(10px 10px 0.95rem rgb(46, 105, 134));
+}
+
+.header_title h1 {
+    font-family: 'Finger Paint';
+    font-size: 2.6em;
+    margin: 0;
+    margin-left: 20px;
+    color: whitesmoke;
+    text-shadow: 2px 3px 0px rgb(141, 140, 140), 0 0 1em rgb(208, 229, 50), 0 0 0.5em rgb(32, 233, 156);
+}
+
+.body {
+    margin-top: 10px;
+    background-color: rgb(171, 171, 131);
+    padding: 10px;
+    text-align: center;
+}
+
+.body h1 {
+    font-family: 'Finger Paint';
+    font-size: 1.8em;
+    color: rgb(139, 84, 12);
+}
+
+.body .container input[type=text] {
+    width: 90%;
+    padding: 12px 0px;
+    border-radius: 50px;
+    border: 5px solid #e24747;
+    padding-left: 20px;
+    position: relative;
+    left: -0px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.body .container button {
+    margin-top: 10px;
+    background-color: #18d8be;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 2px solid #1d11a3;
+    padding: 10px 20px;
+    text-shadow: 2px 3px 0px rgb(141, 140, 140), 0 0 1em rgb(143, 20, 126), 0 0 0.5em rgb(198, 16, 134);
+}
+
+.body .container button:hover {
+    background-color: #287b71;
+    color: rgb(220, 220, 215);
+    text-shadow: 2px 3px 0px rgb(31, 117, 107), 0 0 1em rgb(143, 20, 126), 0 0 0.5em rgb(198, 16, 134);
+}
+
+.main {
+    margin-top: 10px;
+    background-color: rgb(160, 200, 154);
+    padding: 10px;
+    text-align: center;
+}
+
+.main h1 {
+    font-family: 'Finger Paint';
+    font-size: 1.8em;
+    color: rgb(139, 84, 12);
+}
+
+.main .container input[type=text] {
+    width: 90%;
+    padding: 5px 0px;
+    border-radius: 50px;
+    border: 5px solid #e24747;
+    padding-left: 20px;
+    position: relative;
+    left: -0px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main .container button {
+    margin-top: 10px;
+    background-color: #340aa8;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 2px solid #1d11a3;
+    padding: 10px 20px;
+    text-shadow: 2px 3px 0px rgb(129, 18, 129), 0 0 1em rgb(143, 20, 126), 0 0 0.5em rgb(150, 57, 118);
+}
+
+.main .container button:hover {
+    background-color: #54267a;
+    color: rgb(220, 220, 215);
+    text-shadow: 2px 3px 0px rgb(69, 157, 147), 0 0 1em rgb(83, 130, 184), 0 0 0.5em rgb(163, 178, 199);
+}
+
+.main .profile button:hover {
+    background-color: #54267a;
+    color: rgb(220, 220, 215);
+    text-shadow: 2px 3px 0px rgb(69, 157, 147), 0 0 1em rgb(83, 130, 184), 0 0 0.5em rgb(163, 178, 199);
+}
+
+.link {
+    background-color: rgba(250, 235, 215, 0.428);
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-size: 9.2pt;
+}
+
+.link .link-logo {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.link b i {
+    font-style: normal;
+    margin-right: 10px;
+}
+
+.link .fas.fa-copy {
+    cursor: pointer;
+    margin-left: -2px;
+    background-color: rgba(194, 194, 162, 0.647);
+    padding: 9px;
+    border-radius: 50%;
+    font-size: 19.2pt;
+}
+
+.link .fas.fa-copy:hover {
+    background-color: rgba(93, 93, 75, 0.421);
+    text-shadow: 2px 3px 10px rgb(69, 94, 91);
+}
+
+#link-title {
+    font-size: 12.2pt;
+    display: flex;
+    margin-left: 30px;
+    width: 5.5em;
+    padding: 5px;
+    border-radius: 20px 20px 0 0;
+    background-color: rgba(250, 235, 215, 0.428); 
+}

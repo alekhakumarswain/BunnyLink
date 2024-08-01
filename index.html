@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunny Link</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-ABC123';">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-ABC123'">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-5258'">
+
+</head>
+<body>
+    <section class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="#"><img src="img/BunnyLink.png" class="logo" alt="logo"></a>
+            </div>
+            <div class="header_title">
+                <h1>Bunny Link</h1>
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="profile">
+            <h3 id="Username"></h3>
+            <div id="linksContainer">
+                <b id="link-title">Title</b>
+                <div class="link">
+                    <img src="img/BunnyLink.png" class="link-logo" alt="link logo">
+                    <b><i class="profileUrl">https://alekhakumarswain.web.app</i></b>
+                    <i class="fas fa-copy copy-button"></i>
+                </div>
+            </div><br>
+            <button id="addLinkButton"><strong>+</strong> Add Another</button>
+        </div>
+    </section>
+    <script nonce="ABC123">
+        document.addEventListener('DOMContentLoaded', () => {
+            const name = localStorage.getItem("Rname");
+            const usernameDisplay = document.getElementById("Username");
+
+            if (name == null) {
+                window.location.href = "welcome.html";
+            } else {
+                usernameDisplay.innerHTML = `Welcome, ${name}`;
+            }
+
+            const linksContainer = document.getElementById('linksContainer');
+            const profileData = JSON.parse(localStorage.getItem('profileData')) || [];
+
+            function displayLink(profile) {
+                const profileContainer = document.createElement('div');
+                profileContainer.classList.add('profile-container');
+
+                const profileIcon = document.createElement('img');
+                profileIcon.src = profile.icon;
+                profileIcon.alt = 'Profile Icon';
+                profileIcon.classList.add('profile-icon');
+
+                const profileLink = document.createElement('a');
+                profileLink.href = profile.url;
+                profileLink.target = '_blank';
+                profileLink.textContent = profile.uname;
+                profileLink.classList.add('profile-link');
+
+                profileContainer.appendChild(profileIcon);
+                profileContainer.appendChild(profileLink);
+                linksContainer.appendChild(profileContainer);
+            }
+
+            profileData.forEach(profile => {
+                displayLink(profile);
+            });
+
+            document.getElementById('addLinkButton').addEventListener('click', () => {
+                window.location.href = "addlink.html";
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.copy-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const profileUrlElement = this.previousElementSibling;
+                    const textToCopy = profileUrlElement.textContent;
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    try {
+                        document.execCommand('copy');
+                        alert("Copied to clipboard");
+                    } catch (err) {
+                        console.error('Failed to copy text: ', err);
+                    }
+                    document.body.removeChild(textArea);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

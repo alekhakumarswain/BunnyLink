@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "BunnyLink",
+  "description": "A Chrome extension for showing popup alerts to all your shortcut of social media link.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "/img/BunnyLink.png"
+  }
+}
